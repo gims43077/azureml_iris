@@ -1,0 +1,6 @@
+$schema: https://azuremlschemas.azureedge.net/latest/model.schema.json
+name: iris-model
+description: Iris
+type: custom_model
+# Replace <job-name> with the training job name returned by `az ml job create`
+path: azureml://jobs/loving_apple_djkmsrzlfr/outputs/model/paths/

@@ -1,0 +1,25 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+type: command
+display_name: iris-train
+experiment_name: iris-demo
+compute: local
+#azureml: Scluster
+code: ../src
+command: >-
+  python train.py
+  --test_size ${{inputs.test_size}}
+  --random_state ${{inputs.random_state}}
+  --max_iter ${{inputs.max_iter}}
+  --model_output ${{outputs.model}}
+
+environment: azureml:iris-env@latest
+
+inputs:
+  test_size: 0.2
+  random_state: 42
+  max_iter: 500
+
+outputs:
+  model:
+    type: uri_folder
+    mode: upload
