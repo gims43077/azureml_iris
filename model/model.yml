@@ -3,4 +3,4 @@ name: iris-model
 description: Iris
 type: custom_model
 # Replace <job-name> with the training job name returned by `az ml job create`
-path: azureml://jobs/loving_apple_djkmsrzlfr/outputs/model/paths/
+path: azureml://jobs/funny_carpet_gbbnttkqrt/outputs/model/paths/

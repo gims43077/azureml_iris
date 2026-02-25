@@ -2,7 +2,8 @@ $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 type: command
 display_name: iris-train
 experiment_name: iris-demo
-compute: local
+compute: azureml:Scluster
+# local
 #azureml: Scluster
 code: ../src
 command: >-
