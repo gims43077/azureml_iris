@@ -1,13 +1,13 @@
-az configure --defaults group=MS workspace=iris_demo
+az configure --defaults group=MS workspace=iris_demo
 <- Specify which workspace in azure ml you want to work on
 
-az ml environment create -f environment/environment.yml 
+az ml environment create -f environment/environment.yml
 <- Creating an Environment
 
-az ml job create -f job/job.yml 
+az ml job create -f job/job.yml
 <- Creating an Job File
 
-az ml model create -f model/model.yml 
+az ml model create -f model/model.yml
 <- Creating an Model File
 
 mkdir -p demo_model
